@@ -15,28 +15,24 @@ function Banner() {
 
   return (
     <div className="hero">
-      <h1>Pearson Wood Craft Store </h1>
+      <h1>Pearson Wood Craft Auction </h1>
 
       <p className="text">
-        You are at the best place to discover and collect classic items crafted
-        from only the finest woods gathered from around the world.
+        You are at the best place to discover and collect classic items gathered
+        from around the world.
       </p>
 
       <form onSubmit={handleSearch} className="banner-items">
-        <div>
-          <input
-            value={searchText}
-            onChange={(e) => setSearchText(e.target.value)}
-            className="searchbar"
-            placeholder="Find a craft work"
-          />
-        </div>
+        <input
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
+          className="search-bar"
+          placeholder="Find a craft work"
+        />
 
-        <div>
-          <button onClick={handleSearch} className={"hero-button"}>
-            Find Craftwork
-          </button>
-        </div>
+        <button onClick={handleSearch} className={"hero-button"}>
+          Find Craftwork
+        </button>
       </form>
     </div>
   );

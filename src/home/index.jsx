@@ -16,19 +16,17 @@ export function Index() {
   }, [dispatch]);
 
   return (
-    <div>
+    <>
       <Banner />
 
-      <div>
-        <p style={{ textAlign: "center" }} className="text">
-          {artworks.length} Craftwork {artworks.length > 1 && "s"} Available
-        </p>
-      </div>
+      <p style={{ textAlign: "center" }} className="text">
+        {artworks.length} Craftwork {artworks.length > 1 && "s"} Available
+      </p>
 
       <ul className="cards-list">
-        {artworks.map(({ fields }, idx) => {
+        {artworks.map(({ fields }, index) => {
           return (
-            <li key={idx}>
+            <li key={index}>
               <CraftCard
                 description={fields.description}
                 name={fields.name}
@@ -40,6 +38,6 @@ export function Index() {
           );
         })}
       </ul>
-    </div>
+    </>
   );
 }
